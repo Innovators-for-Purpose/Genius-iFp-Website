@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="../headerFooter/header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="container">
+            <div class="left-group">
+                <a href="../index.html"><p id="containerText">GENIUS WITHIN</p></a>
+                <input type="text" id="searchInput" placeholder="Search..." />
+            </div>
+
+            <div class="right-group">
+                <a href="../aboutpage.html"><div class="genius-button">About the Geniuses</div></a>
+                <a href="../TheMakingOf.html"><div class="headerLinks">The Making of</div></a>
+            </div>
+
+            <div class="more-button" onclick="toggleDropdown()"></div>
+
+            <div id="moreDropdown" class="dropdown-content">   
+                <input type="text" id="searchInput2" placeholder="Search..." />
+                <div id="searchLinks">
+                    <a href="../aboutpage.html">The Geniuses</a>
+                    <a id="makingOF-link" href="../TheMakingOf.html">The Making Of</a>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
