@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Geniuses</title>
+    <link rel="stylesheet" href="aboutpage.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="title">
+            <h1>About the Geniuses</h1>
+        </div>
+        <div class="description">
+            <p>Genius Within, created by iFp Innovators, celebrates Kendall’s innovative spirit through an inclusive lens.  This installation honors some of the world’s most brilliant innovators - thinkers and doers who have shaped Kendall Square and beyond.  </p>
+        </div>
+        <div class="main-content">
+            <div class="grid">
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/DrJoyBuolamwinu.png" alt="Nature 1">
+                        <div class="genius-name">Dr. Joy Buolamwini</div>
+                        <a href="Geniuses/JoyBuolamwini.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/MillieDresselhaus.png" alt="Nature 2">
+                        <div class="genius-name">Dr. Millie Dresselhaus</div>
+                        <a href="Geniuses/Millie.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/SalKhan.png" alt="Nature 3">
+                        <div class="genius-name">Salman Khan</div>
+                        <a href="Geniuses/SalmanKhan.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/DrDanielleWood.png" alt="Nature 4">
+                        <div class="genius-name">Professor Danielle Wood</div>
+                        <a href="Geniuses/DanielWood.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/DrSabrinaGonzalezPasterski.png" alt="Nature 5">
+                        <div class="genius-name">Dr. Sabrina Gonzalez Pasterski</div>
+                        <a href="Geniuses/SabrinaGonzalez.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/DrRonaldMcNair.png" alt="Nature 6">
+                        <div class="genius-name">Dr. Ronald E. McNair</div>
+                        <a href="Geniuses/RonaldMacnair.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/Robert.png" alt="Nature 4">
+                        <div class="genius-name">Robert Parris Moses</div>
+                        <a href="Geniuses/RobertParisMoses.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/Ayana.png" alt="Nature 4">
+                        <div class="genius-name">Congresswoman Ayanna Pressley (MA-07)</div>
+                        <a href="Geniuses/AyannaPresley.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/Mary.png" alt="Nature 4">
+                        <div class="genius-name">Mary L. Gray</div>
+                        <a href="Geniuses/MaryGray.html"><button class="offset-button">View →</button></a>
+                    </div>
+ 
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/Sangeeta.png" alt="Nature 4">
+                        <div class="genius-name">Dr. Sangeeta N. Bhatia</div>
+                        <a href="Geniuses/SangeetaBhatia.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/Shirley.png" alt="Nature 4">
+                        <div class="genius-name">Dr. Shirley Ann Jackson</div>
+                        <a href="Geniuses/AnnJackson.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="genius-card">
+                        <img class="genius-image" src="images/leaders/Edwin.png" alt="Nature 4">
+                        <div class="genius-name">Dr. Edwin Land</div>
+                        <a href="Geniuses/EdwinLand.html"><button class="offset-button">View →</button></a>
+                    </div>
+
+                    <div class="tetris-card">
+                        <img src="images/tetris.jpg">
+                        <div class="genius-name">Tetris Hack</div>
+                        <a href="Geniuses/TetrisHack.html"><button class="tetris-card-button">View →</button></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const headerObserver = new MutationObserver(() => {
+            const searchInput = document.getElementById("searchInput"); // Find the search box
+
+            if (searchInput) {
+                // Oonce found add input listener
+                searchInput.addEventListener("input", function () {
+                    const input = searchInput.value.toLowerCase().trim();
+                    const geniusCards = document.querySelectorAll(".genius-card, .tetris-card");
+
+                    geniusCards.forEach(function(card) {
+                        const nameElement = card.querySelector(".genius-name");
+
+                        if (nameElement) {
+                            const name = nameElement.textContent.toLowerCase();
+
+                            if (name.includes(input)) {
+                                card.style.display = ""; // show 
+                            } else {
+                                card.style.display = "none"; // hide
+                            }
+                        }
+                    });
+                });
+
+                // stop observing once search input is found and listener is attached
+                headerObserver.disconnect();
+            }
+            const searchInput2 = document.getElementById("searchInput2"); // Find the search box
+
+            if (searchInput2) {
+                // Oonce found add input listener
+                searchInput2.addEventListener("input", function () {
+                    const input = searchInput2.value.toLowerCase().trim();
+                    const geniusCards = document.querySelectorAll(".genius-card, .tetris-card");
+
+                    geniusCards.forEach(function(card) {
+                        const nameElement = card.querySelector(".genius-name");
+
+                        if (nameElement) {
+                            const name = nameElement.textContent.toLowerCase();
+
+                            if (name.includes(input)) {
+                                card.style.display = ""; // show 
+                            } else {
+                                card.style.display = "none"; // hide
+                            }
+                        }
+                    });
+                });
+
+                // stop observing once search input is found and listener is attached
+                headerObserver.disconnect();
+            }
+        });
+
+        // start watching the #header element for changes
+        headerObserver.observe(document.getElementById("header"), {
+            childList: true,
+            subtree: true
+        });
+    });
+    </script>
+</body>
+<script src="../headerFooter/headerFooterManager.js"></script>
+<script src="../headerFooter/dropDownMenu.js"></script>
+</html>
